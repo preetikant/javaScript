@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+	<meta charset="UTF-8">
+		<title>
+					Ma.Pi.Bha.Teaching
+		</title>
+		<style>
+		
+		div#main{
+					margin: 0 auto;
+				}
+			body{
+					background-color: wheat;
+					width:1300px;
+					height:2000px;
+					border: 10px groove yellow;
+					padding: 10px;
+				
+				}
+			#first{
+					position:fixed;
+					top:0px;
+					font-size: 30px;
+					color: brown;
+					font-style: italic;
+					font-weight: bold;
+					text-align: center;
+				
+				}
+			.common 
+				{		
+					background-color:;
+					position: absolute;
+				}
+			.box1
+				{
+					Z-index;
+					left:20px;
+					top:10px;
+					text-color:Red;
+				}
+			.box2{
+					Z-index;
+					left:20%;
+					top:50px;
+					width:800px;
+					height:100px;
+					padding-top:0px;
+					padding-bottom:10px;				
+					text-align:center;
+				}
+			.box3{
+					position:fixed;
+					Z-index;
+					right:20px;
+					top:50px;
+					border: 5px dotted #00f;
+					
+				 }
+				
+		</style>
+	</head>
+	<body>
+	<div id="main">
+			<div class="common box1">
+			<h1 id="first" onmouseover="effect1()" onmouseout="effect2()">
+					Most Welcome To Ma.Pi.Bha.Teaching
+			</h1>
+			</div>
+			
+		<div class="common box2">
+			<h1 id="second"  onmouseover="effect3()" onmouseout="effect4()">
+					Is video mai cmd Command Black mai hongi,NOTE point red mai honge or Step green mai honge
+			</h1>
+		</div>
+		<div class="common box3">
+			<img src="F:\my important things\my Html Css and java Script study\MY Resume nice_files\use.jpg" height="200px" width="200px" >
+		</div>
+	</div>
+		
+			<script type="text/javascript">
+				function effect1(){
+					var x=document.getElementById("first");
+					x.style.backgroundColor="#fbc";
+				}
+				function effect2(){
+					var x=document.getElementById("first");
+					x.style.backgroundColor="white";
+				}
+				function effect3(){
+					var x=document.getElementById("second");
+					x.style.backgroundColor="#ffccaa";
+				}
+				function effect4(){
+					var x=document.getElementById("second");
+					x.style.backgroundColor="white";
+				}
+			</script>
+	</body>
+</html>

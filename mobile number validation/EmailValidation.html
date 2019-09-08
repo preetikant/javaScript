@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+	<h1 style="color: #8976aa; text-align: center;">This is Email Validation Page</h1>
+		<form onsubmit="return myfun()" name="forms">
+			Email: <input type="text" name="email" id="name" value=""/>
+			<span id="message" style="color:red; font-size:20px;"></span><br/><br/>
+			<input type="submit" value="Submit"/>
+		</form>
+		<script>
+			function myfun()
+			{
+				var a=document.forms.email.value;
+					if(a=="")
+						{
+							document.getElementById("message").innerHTML="**Enter your email";
+							return false;
+						}
+					if(a.indexOf('@')<=0)
+						{
+							document.getElementById("message").innerHTML="**Invalid @ position";
+							return false;
+						}
+					if((a.charAt(a.length-4)!=".") && (a.charAt(a.length-3)!="."))
+						{
+							document.getElementById("message").innerHTML="**Invalid '.' position";
+							return false;
+						}
+			}
+		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>
+			Cheked Box
+		</title>
+	</head>
+		<body>
+		<h1 style="color: #89cc89; text-align: center;" >Please select any checkedbox </h1><br/>
+			<form onsubmit="return funMy();" name="forms">
+				
+				<input type="checkbox" name="container" value="like">Like</input>
+				<input type="checkbox" name="container" value="like">Share</input>
+				<input type="checkbox" name="container" value="like">Subscribe</input><br/><br/>
+				<span id="message"></span><br/><br/>
+				<input type="submit" value="Submit"></input>
+			</form>
+					<script>
+						function funMy()
+						{
+							var a = document.forms.container;
+								for(var i=0;i<a.length;i++)
+									{
+										if(a[i].checked==true)
+										return true;
+									}
+						
+							document.getElementById("message").innerHTML="**Please select any checkbox";
+							return false;
+						}
+					</script>
+		</body>
+</html>

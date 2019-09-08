@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>radioButto validation </title>
+	</head>
+		<body>
+			<form onsubmit="return myfun()" name="forms">
+				<h1 style="color: #983520; text-align: center;">Radio Button Validation</h1>
+				<h1>**What You Want**</h1><br/>
+				<input type="radio" name="container" value="like">LIKE</input>
+				<input type="radio" name="container" value="share">SHARE</input>
+				<input type="radio" name="container" value="subscribe">SUBSCRIBE</input>
+				<div ><h4 id="message"></h4></div>
+				<input type="submit" value="Submit">
+				
+			</form>
+				<script>
+				function myfun()
+				{
+					var a=document.forms.container;
+					for(var i=0;i<a.length;i++)
+					{
+						if(a[i].checked==true)
+						return true;
+					}
+					document.getElementById("message").innerHTML="**Please checked any checked box";
+					return false;
+				}
+				</script>
+		</body>
+</html>

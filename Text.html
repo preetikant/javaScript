@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+	<form onsubmit="return myfun();" name="forms">
+		<input type="radio" name="container" value="like">Like</input>
+		<input type="radio" name="container" value="share">Share</input>
+		<input type="radio" name="container" value="subscribe">Subscribe</input><br/>
+		<div><p id="message"></p></div>
+		<input type="submit" value="Submit"></input>
+	</form>
+			<script>
+				function myfun(){
+					var a=document.forms.container;
+					for(var i=0;i<a.length;i++)
+					{
+						if(a[i].checked==true)
+						return true;
+						
+					}
+					document.getElementById("message").innerHTML="**Please Select any checked box";
+					return false;
+				}
+			</script>
+</body>
+</html>

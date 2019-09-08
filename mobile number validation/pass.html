@@ -1,0 +1,45 @@
+
+<html>
+	<head></head>
+	<body>
+	
+<h1 style="color:green; text-align:center;">Mobile number validation</h1>
+		<form onsubmit="return myFun();">
+			Mobile Number : <input type="text" id="mobilenumber" value="">
+			<span id="message" style="color:red; font-size:20px;"></span>
+			<br><br/>
+			<input type="submit" value="Submit"/>
+		</form>
+					<script>
+						function myFun()
+						{
+							var a = document.getElementById("mobilenumber").value;
+							if(a=="")
+							{
+								document.getElementById("message").innerHTML="**Please fill Mobile Number";
+								return false;
+							}
+								if(isNaN(a))
+							{
+								document.getElementById("message").innerHTML="**Please Enter Only digit value";
+								return false;
+							}
+							if(10<a.length)
+							{
+								document.getElementById("message").innerHTML="**Please Enter 10 digit mobile number";
+								return false;
+							}
+							if(10>a.length)
+							{
+								document.getElementById("message").innerHTML="**Please Enter 10 digit mobile number";
+								return false;
+							}
+							if((a.charAt(0)!=9) && (a.charAt(0)!=8) && (a.charAt(0)!=7) && (a.charAt(0)!=6) )
+							{
+								document.getElementById("message").innerHTML="**Mobile Number must start with 9,8,7 and 6";
+								return false;
+							}
+						}
+					</script>
+	</body>
+</html>
